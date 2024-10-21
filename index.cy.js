@@ -10,7 +10,8 @@ describe('example to-do app', () => {
         cy.get('label.custom-control-label[for="hobbies-checkbox-2"]').click();
         cy.get("#currentAddress").type("Argatsotn region");
         cy.get("#submit").click();
-        // cy.get("#closeLargeModal").click();
+        cy.get("tbody").should("exist");
+        cy.get('button.btn-primary[id="closeLargeModal"]').click();
     })
 
 })
